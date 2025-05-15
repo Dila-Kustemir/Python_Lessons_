@@ -1,0 +1,12 @@
+# Kullanıcının girdiği iki sayının toplamının karesini ve küpünü hesaplayınız.
+
+sayi1 = int(input("Lütfen bir sayı giriniz:"))
+sayi2 = int(input("Lütfen bir sayı giriniz:"))
+
+toplam = sayi1 + sayi2
+
+# ** üs anlamına gelir
+kare = toplam ** 2
+kup = toplam ** 3
+
+print("İki sayının toplamı: ", toplam, "Toplamlarının karesi: ", kare, "Toplamlarının küoü:", kup)

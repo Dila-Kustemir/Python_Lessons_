@@ -1,0 +1,4 @@
+sayi1 = int(input("Lütfen bir tamsayı giriniz:"))
+sayi2 = float(input("Lütfen bir ondalıklı sayı giriniz:"))
+
+print("Toplamları:" , (sayi1+sayi2))

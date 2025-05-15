@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Döviz Uygulaması</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+  <div class="container">
+      <h2>Döviz Çevirici</h2>
+      <form method="POST">
+          <div class="form-group">
+              <label>Bozulan Döviz (örn: USD)</label>
+              <input type="text" name="bozulan" required>
+          </div>
+
+          <div class="form-group">
+              <label>Alınacak Döviz (örn: TRY)</label>
+              <input type="text" name="alinan" required>
+          </div>
+
+          <div class="form-group">
+              <label>Miktar</label>
+              <input type="number" name="miktar" step="0.01" required>
+          </div>
+
+          <button type="submit">Çevir</button>
+      </form>
+
+  {% if result %}
+  {% if result.error %}
+    <p class="error">{{ result.error }}</p>
+  {% else %}
+    <p>1 {{ result.bozulan }} = {{ result.oran }} {{ result.alinan }}</p>
+    <p>{{ result.miktar }} {{ result.bozulan }} = {{ result.sonuc }} {{ result.alinan }}</p>
+  {% endif %}
+{% endif %}
+</body>
+
+
+
+      

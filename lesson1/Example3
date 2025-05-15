@@ -1,0 +1,6 @@
+# 3 ile 20 arasındaki çif sayıları yazdıran python kodu?
+
+for i in range(3, 20, 1):
+    if i % 2 == 0:
+        print(i, "Sayısı çift sayıdır.")
+    
